@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+
+  <title>Admin Dashboard</title>
+</head>
+<body onload="loadLayout()" class="bg-light">
+
+    <div id="navbar"></div>
+<div class="container py-5">
+
+  <!-- Header -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="fw-bold">Admin</h1>
+    <div class="d-flex gap-2">
+      <button class="btn btn-outline-dark">Export</button>
+      <a href="{{ url_for('add_product_page') }}" class="btn btn-dark" data-page ="addProduct">Add Product</a>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="row g-4 mb-4" id="statsContainer"></div>
+
+  <!-- Tables -->
+  <div class="row g-4 mb-4">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header d-flex justify-content-between">
+          <strong>Recent Orders</strong>
+          <button class="btn btn-sm btn-link">All</button>
+        </div>
+        <div class="table-responsive">
+          <table class="table mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>ID</th>
+                <th>Customer</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Delivery</th>
+                <th>Collection</th>
+              </tr>
+            </thead>
+            <tbody id="ordersTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-header d-flex justify-content-between">
+          <strong>Top Products</strong>
+          <button class="btn btn-sm btn-link">All</button>
+        </div>
+        <div class="table-responsive">
+          <table class="table mb-0">
+            <thead class="table-light">
+              <tr>
+                <th>Product</th>
+                <th>Sold</th>
+                <th>Revenue</th>
+              </tr>
+            </thead>
+            <tbody id="productsTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inventory -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <strong>Inventory Management</strong>
+    </div>
+  
+    <div class="table-responsive">
+      <table class="table mb-0">
+        <thead class="table-light">
+          <tr>
+            <th>Product</th>
+            <th>Stock</th>
+            <th>Update</th>
+          </tr>
+        </thead>
+        <tbody id="inventoryTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="row g-4">
+    <div class="col-md-4" id="actions1"></div>
+    <div class="col-md-4" id="actions2"></div>
+    <div class="col-md-4" id="actions3"></div>
+  </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='admin.js') }}"></script>
+<script src="{{ url_for('static', filename='layout.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+body {
+    background: linear-gradient(135deg, #f6f8fb, #eef2f7);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2)),
+                url("https://images.unsplash.com/photo-1542838132-92c53300491e");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+  
+  .hero .btn {
+    border-radius: 12px;
+    padding: 12px 24px;
+    transition: all 0.25s ease;
+  }
+  
+  .hero .btn:hover {
+    transform: translateY(-3px);
+    background: #fff;
+  }
+  
+  /* SEARCH BAR */
+  .search-bar {
+    margin-top: -40px;
+  }
+  
+  .search-bar .bg-white {
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .search-bar input {
+    border-radius: 10px;
+  }
+  
+  .search-bar button {
+    border-radius: 10px;
+  }
+  
+  /* SECTION HEADINGS */
+  h2 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  /* CATEGORY CARDS */
+  #categories > div {
+    transition: all 0.25s ease;
+  }
+  
+  #categories > div:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+  
+  /* PRODUCT CARDS */
+  #products > div {
+    transition: all 0.3s ease;
+  }
+  
+  #products > div:hover {
+    transform: translateY(-6px);
+  }
+  
+  /* If you're rendering cards inside */
+  .card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  }
+  
+  /* Promo section */
+  .promo {
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff, #f1f3f5);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  }
+  
+  .promo .btn {
+    border-radius: 12px;
+    padding: 10px 22px;
+  }
+  
+  /* Toast */
+  .toast {
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  
+  /* Buttons */
+  .btn {
+    transition: all 0.2s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Smooth fade-in */
+  section {
+    animation: fadeIn 0.6s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #111;
+    color: white;
+    padding: 16px 20px;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 9999;
+  }
+  
+  .cookie-banner.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }

@@ -1,0 +1,148 @@
+/* Smooth background transitions */
+body {
+  transition: background-color 0.6s ease, color 0.3s ease;
+}
+
+/* Override Bootstrap bg-light when JS sets color */
+body.bg-light {
+  background-color: #f8f9fa;
+}
+
+/* Card styling */
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* Dark card variant */
+.card-dark {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  color: white;
+}
+
+/* Hover effect */
+.hover-lift:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Headings */
+h1, h3 {
+  letter-spacing: -0.5px;
+}
+
+/* Table improvements */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: #f1f3f5;
+}
+
+.table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background: rgba(0,0,0,0.03);
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.1s; }
+.fade-in:nth-child(2) { animation-delay: 0.2s; }
+.fade-in:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tier-based accents (works with your JS logic) */
+body[style*="#FFD700"] .card {
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.25);
+}
+
+body[style*="#E5E4E2"] .card {
+  box-shadow: 0 10px 25px rgba(200, 200, 200, 0.3);
+}
+
+body[style*="#acacac"] .card {
+  box-shadow: 0 10px 25px rgba(150, 150, 150, 0.25);
+}
+
+/* Typography polish */
+small {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* Rewards grid cards (future-proof) */
+#rewardsContainer .card {
+  cursor: pointer;
+}
+
+/* .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hover-lift {
+    transition: all 0.25s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+  
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .circle:hover {
+    transform: scale(1.1);
+  }
+  
+
+  .btn-animate {
+    transition: all 0.2s ease;
+  }
+  
+  .btn-animate:hover {
+    transform: scale(1.05);
+  }
+  
+
+  .card-dark {
+    background-color: #212529;
+    color: white;
+  } */

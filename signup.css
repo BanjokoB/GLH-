@@ -1,0 +1,31 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+  }
+  
+  .signup-card {
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .input-group .btn {
+    cursor: pointer;
+  }
+  
+  .invalid-feedback {
+    font-size: 0.875rem;
+    color: #dc3545;
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 20px 0;
+  }

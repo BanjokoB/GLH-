@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='userAccount.css') }}">
+    <title>Account</title>
+</head>
+<body onload="loadLayout()">
+    <div id="navbar" aria-label="Main navbar"></div>
+    <div class="container py-5">
+        <h1 class="fw-bold mb-4">Account</h1>
+      
+        <div class="row g-4">
+      
+          <!-- Sidebar -->
+          <div class="col-lg-3" aria-label="side bar">
+            <div class="bg-white border rounded p-4 sticky-top" style="top:100px;">
+      
+              <!-- Profile -->
+              <div class="text-center mb-4 pb-4 border-bottom" aria-label="Profile">
+                <div class="bg-secondary rounded-circle mx-auto mb-3" style="width:80px;height:80px;"></div>
+                <h5 class="fw-bold" id="userName">Loading...</h5>
+                <p class="text-muted small" id="userEmail">Loading...</p>
+              </div>
+      
+              <!-- Navigation -->
+              <div class="d-grid gap-2" aria-label="Profile Navigation">
+                <button class="btn btn-light text-start fw-semibold">Orders</button>
+                <button class="btn btn-light text-start">Saved</button>
+                <button class="btn btn-light text-start">Addresses</button>
+                <button class="btn btn-light text-start">Settings</button>
+                <button class="btn btn-light text-start text-muted" id="logoutBtn" style="display:none;">Logout</button>
+              </div>
+      
+            </div>
+          </div>
+      
+          <!-- Main Content -->
+          <div class="col-lg-9">
+      
+            <!-- Stats -->
+            <div class="row g-3 mb-4" aria-label="User statistics">
+              <div class="col-md-4">
+                <div class="bg-white border rounded p-4">
+                  <span class="text-muted">Orders</span>
+                  <h2 class="fw-bold" id="orderCount">0</h2>
+                  <small class="text-muted">Total</small>
+                </div>
+              </div>
+      
+              <div class="col-md-4">
+                <div class="bg-white border rounded p-4">
+                  <span class="text-muted">Spent</span>
+                  <h2 class="fw-bold" id="totalSpent">£0.00</h2>
+                  <small class="text-muted">Lifetime</small>
+                </div>
+              </div>
+      
+              <div class="col-md-4">
+                <div class="bg-white border rounded p-4">
+                  <span class="text-muted">Saved</span>
+                  <h2 class="fw-bold" id="savedItemsCount">0</h2>
+                  <small class="text-muted">Items</small>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Orders -->
+            <div class="bg-white border rounded mb-4">
+              <div class="bg-light border-bottom p-3 d-flex justify-content-between">
+                <h5 class="fw-bold mb-0">Orders</h5>
+                <button class="btn btn-sm btn-link text-muted">View All</button>
+              </div>
+      
+              <div id="orders"></div>
+            </div>
+      
+            <!-- Saved Items -->
+            <div class="bg-white border rounded mb-4">
+              <div class="bg-light border-bottom p-3 d-flex justify-content-between">
+                <h5 class="fw-bold mb-0">Saved</h5>
+                <button class="btn btn-sm btn-link text-muted">View All</button>
+              </div>
+      
+              <div class="p-4">
+                <div class="row g-3" id="savedItems"></div>
+              </div>
+            </div>
+      
+            <!-- Addresses -->
+            <div class="bg-white border rounded p-4">
+              <h5 class="fw-bold mb-3">Addresses</h5>
+      
+              <div class="row g-3" id="userAddresses">
+                <!-- Dynamic Address Elements -->
+              </div>
+            </div>
+      
+          </div>
+        </div>  
+      </div>
+
+      <!-- footer -->
+      <div id="footer"></div>
+      
+       <!-- Bootstrap JS -->
+   <script src="{{ url_for('static', filename='userAccount.js') }}"></script>
+   <script src="{{ url_for('static', filename='layout.js') }}"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+      <!-- Navbar injection -->
+  <div id="navbar"></div>
+    <div class="container py-5">
+        <h3>Add Product</h3>
+    <!-- Add new products -->
+<form id="productForm" class="row g-3">
+    <input class="form-control" id="name" placeholder="Name" required>
+    <input class="form-control" id="price" type="number" step="0.01" placeholder="Price" required>
+    <input class="form-control" id="category" placeholder="Category" required>
+    <input class="form-control" id="description" placeholder="Description">
+    <input class="form-control" id="producer" placeholder="Producer">
+    <input class="form-control" id="image" type="file" accept="image/*">
+
+    <button class="btn btn-dark">Add Product</button>
+  </form>
+</div>
+
+  <!-- Footer injection -->
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="{{ url_for('static', filename='layout.js') }}"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

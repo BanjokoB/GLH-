@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='loyalty.css') }}">
+
+  <title>GLH</title>
+</head>
+
+<body onload="loadLayout()" class="bg-light">
+
+  <div id="navbar"></div>
+
+  <div class="container py-5">
+
+    <h1 class="mb-4 fw-bold fade-in">Points</h1>
+
+    <!-- Points Overview -->
+    <div class="row g-4 mb-5">
+      <div class="col-md-4 fade-in">
+        <div class="card card-dark p-4 hover-lift">
+          <small>Total Points</small>
+          <h2 class="fw-bold" id="totalPoints">0</h2>
+          <small>Available</small>
+        </div>
+      </div>
+
+      <div class="col-md-4 fade-in">
+        <div class="card p-4 hover-lift">
+          <small class="text-muted">Earned (30d)</small>
+          <h2 class="fw-bold" id="earnedPoints">0</h2>
+          <small class="text-muted">Live data</small>
+        </div>
+      </div>
+
+      <div class="col-md-4 fade-in">
+        <div class="card p-4 hover-lift">
+          <small class="text-muted">Tier</small>
+          <h2 class="fw-bold" id="tier">Bronze</h2>
+          <small class="text-muted" id="nextTier">--</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rewards -->
+    <div class="mb-5">
+      <h3 class="fw-bold mb-4 fade-in">Rewards</h3>
+      <div class="row g-4" id="rewardsContainer"></div>
+    </div>
+
+    <!-- Activity -->
+    <div class="fade-in">
+      <h3 class="fw-bold mb-4">Activity</h3>
+      <div class="card hover-lift">
+        <table class="table mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>Type</th>
+              <th>Points</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="activityTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script src="{{ url_for('static', filename='loyalty.js') }}"></script>
+  <script src="{{ url_for('static', filename='layout.js') }}"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+:::
